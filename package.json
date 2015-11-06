@@ -1,0 +1,22 @@
+{
+  "name": "angular-module-builder",
+  "version": "0.0.1",
+  "description": "Classes to help build angular modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammerWithoutaName/angular-module-builder.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Programmer Without A Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProgrammerWithoutaName/angular-module-builder/issues"
+  },
+  "homepage": "https://github.com/ProgrammerWithoutaName/angular-module-builder#readme"
+}
