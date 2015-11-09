@@ -1,5 +1,5 @@
 'use strict';
-import componentTypes from 'componentTypes.es6';
+import componentTypes from './componentTypes.es6';
 
 export default class ComponentDefinition {
     constructor(parentModuleDefinition, name) {
