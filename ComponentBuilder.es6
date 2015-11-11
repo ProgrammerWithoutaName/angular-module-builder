@@ -39,8 +39,8 @@ class ComponentBuilder {
         }
 
         switch(component.type) {
-            case componentTypes.config: return this.parentModule.config( component.implementation);
-            case componentTypes.run: return this.parentModule.run( component.implementation);
+            case componentTypes.config: return this.parentModule.config(component.implementation);
+            case componentTypes.run: return this.parentModule.run(component.implementation);
             case componentTypes.constant: return this.parentModule.constant(component.name, component.implementation);
             case componentTypes.value: return this.parentModule.value(component.name, component.implementation);
             case componentTypes.factory: return this.parentModule.factory(component.name, component.implementation);

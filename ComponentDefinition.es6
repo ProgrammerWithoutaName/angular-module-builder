@@ -1,5 +1,6 @@
 'use strict';
 import componentTypes from './componentTypes.es6';
+import capitalize from 'capitalize';
 
 export default class ComponentDefinition {
     constructor(parentModuleDefinition, name) {
@@ -13,9 +14,9 @@ export default class ComponentDefinition {
 
     static getCodeName(componentName) {
         let codeNameArray = componentName.split(/[\.`~!@#%^&\*\-\+]/gi);
-        codeNameArray = codeNameArray.map( (section, index) => {
+        codeNameArray = codeNameArray.map((section, index) => {
             if(index > 0) {
-                section = capitalizeFirstLetter(section);
+                section = capitalize(section);
             }
             return section;
         });
@@ -31,15 +32,11 @@ export default class ComponentDefinition {
         }
 
         switch(this.type) {
-            case componentTypes.provider: return this.name + 'Provider';
-            case componentTypes.filter: return this.name + 'Filter';
+            case componentTypes.provider: return `${this.name}Provider`;
+            case componentTypes.filter: return `${this.name}Filter`;
             case componentTypes.run: return undefined;
             case componentTypes.config: return undefined;
             default: return this.name
         }
     }
-}
-
-function capitalizeFirstLetter(stringValue) {
-    return stringValue.charAt(0).toUpperCase() + stringValue.slice(1);
 }
