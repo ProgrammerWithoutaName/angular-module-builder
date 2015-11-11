@@ -74,14 +74,5 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0"
   },
-  "scripts": {
-    "firstRun": "npm config set msvs_version 2013 --global && npm install webpack bower karma-cli force-dedupe-git-modules gulp grunt-cli -g && npm install",
-    "postinstall": "bower install && force-dedupe-git-modules",
-    "pretest": "npm install",
-    "test": "karma start test/karma.conf.js",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "npm run protractor test/protractor.conf.js",
-    "lint:tc": "eslint app -f checkstyle -o testResults/eslint.checkstyle.xml",
-    "lint": "eslint app -f node_modules/eslint-html-reporter/reporter.js -o testResults/eslint.html"
-  }
+  "scripts": { }
 }
