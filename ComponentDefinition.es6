@@ -13,7 +13,7 @@ export default class ComponentDefinition {
 
     static getCodeName(componentName) {
         let codeNameArray = componentName.split(/[\.`~!@#%^&\*\-\+]/gi);
-        codeNameArray = codeNameArray.map( (section, index) => {
+        codeNameArray = codeNameArray.map((section, index) => {
             if(index > 0) {
                 section = capitalizeFirstLetter(section);
             }
@@ -31,8 +31,8 @@ export default class ComponentDefinition {
         }
 
         switch(this.type) {
-            case componentTypes.provider: return this.name + 'Provider';
-            case componentTypes.filter: return this.name + 'Filter';
+            case componentTypes.provider: return `${this.name}Provider`;
+            case componentTypes.filter: return `${this.name}Filter`;
             case componentTypes.run: return undefined;
             case componentTypes.config: return undefined;
             default: return this.name
