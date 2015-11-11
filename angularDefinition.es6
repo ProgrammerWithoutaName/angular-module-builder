@@ -1,9 +1,11 @@
 'use strict';
+let angular = undefined;
+let angularInstance = {
+    get angular() { return angular; }
+};
 
-let angularInstance = undefined;
+export function setAngularInstance(angularImplementation) {
+    angular = angularImplementation;
+}
 
 export default angularInstance;
-
-export function setAngularInstance(angular) {
-    angularInstance = angular;
-}

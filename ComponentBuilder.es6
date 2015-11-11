@@ -61,8 +61,10 @@ class ComponentBuilder {
     }
 
     getDependencyKey(dependency) {
-        if(this.exportComponents.has(dependency)) {
-            return this.exportComponents.get(dependency).componentKey;
+        if (this.exportComponents.has(dependency)) {
+            dependency = this.exportComponents.get(dependency).componentKey;
+        } else if (dependency.componentKey) {
+            dependency = dependency.componentKey;
         }
 
         return dependency;

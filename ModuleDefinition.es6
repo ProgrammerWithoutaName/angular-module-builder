@@ -18,7 +18,7 @@ export default class ModuleDefinition {
 
     setComponents(components) {
         let keys = Object.keys(components);
-        components.forEach(componentCodeName => {
+        keys.forEach(componentCodeName => {
             let component = new ComponentDefinition(this, components[componentCodeName]);
             component.codeName = componentCodeName;
             this.components[componentCodeName] = component;
