@@ -49,6 +49,7 @@ class ComponentBuilder {
             case componentTypes.filter: return this.parentModule.filter(component.name, component.implementation);
             case componentTypes.provider: return this.parentModule.provider(component.name, component.implementation);
             case componentTypes.directive: return this.parentModule.directive(component.name, component.implementation);
+            case componentTypes.component: return this.parentModule.component(component.name, component.implementation);
         }
     }
 

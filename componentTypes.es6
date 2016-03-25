@@ -10,7 +10,8 @@ const componentTypes = {
     controller: 'controller',
     filter: 'filter',
     provider: 'provider',
-    directive: 'directive'
+    directive: 'directive',
+    component: 'component'
 };
 
 export default componentTypes;
@@ -23,7 +24,8 @@ export const injectableComponents = new Set([
     componentTypes.controller,
     componentTypes.filter,
     componentTypes.provider,
-    componentTypes.directive
+    componentTypes.directive,
+    componentTypes.component
 ]);
 
 export const configurationComponents = new Set([
